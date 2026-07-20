@@ -3,7 +3,17 @@
 本项目基于开源汉英词典数据集 [hanyingcidian](https://github.com/1418731519shuer/hanyingcidian) 整理，去除了原仓库的自述文件，并针对软件开发（如 Flutter、Android、iOS 或后端服务）的高性能查询需求，将 215MB 的 CSV 词典数据转换并写成了优化且带索引的 **SQLite 软件词库**。
 
 > [!IMPORTANT]
-> **说明**：Daily Hanzi 完整软件暂未开源。当前仓库上传与展示的是经过多智能体系统（Multi-Agent System）清洗并补全的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库）。
+> **说明**：Daily Hanzi 完整软件源码暂未开放。当前仓库上传与展示的是经过多智能体系统（Multi-Agent System）清洗并补全的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库），以及供测试体验的 Demo 应用安装包。
+
+> [!WARNING]
+> **测试版本已知说明与限制**：
+> 1. **测试定位**：当前提供的 APK 仅供测试体验使用。
+> 2. **适配说明**：部分机型依赖 **NPU** 与 **ML Kit** 的硬件/框架适配工作尚未完成，在部分特定设备上可能存在兼容性问题或性能未达最佳。
+> 3. **源码状态**：应用程序源码暂未开放。
+
+## 📱 测试版 APK 下载
+- **GitHub Releases 直接下载**：在 [Releases v0.1.0-test](https://github.com/Timothy-kira/daily-hanzi/releases/tag/v0.1.0-test) 页面点击下载 [app-debug.apk](https://github.com/Timothy-kira/daily-hanzi/releases/download/v0.1.0-test/app-debug.apk)。
+- **仓库 ZIP 解压下载**：或直接在仓库根目录下载 `app-debug.apk.zip` (约 92MB)，解压后即可获得 `app-debug.apk` 安装包。
 
 ## 🤖 数据处理工作流 (Multi-Agent System)
 
@@ -16,6 +26,7 @@
 ## 目录结构
 - `clean_dict.csv.zip` : 原始 CSV 数据集的 ZIP 压缩包 (约 57MB)。解压后可获得 215MB 的 `clean_dict.csv`。
 - `daily_hanzi.db.zip` : 已建立索引的 SQLite 数据库的 ZIP 压缩包 (约 72MB)。解压后可获得 245MB 的 `daily_hanzi.db` 软件词库。
+- `app-debug.apk.zip` : 测试版 APK 安装包的 ZIP 压缩包 (约 92MB)。解压后可获得 `app-debug.apk`。
 - `convert_to_db.py` : 用于将 CSV 文件转换为 SQLite 数据库的 Python 转换脚本。
 - `verify_db.py` : 用于测试数据库完整性与查询性能的 Python 验证脚本。
 
