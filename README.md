@@ -1,7 +1,5 @@
 # Daily Hanzi Dictionary Database (每日汉字词库)
 
-本项目基于开源汉英词典数据集 [hanyingcidian](https://github.com/1418731519shuer/hanyingcidian) 整理，去除了原仓库的自述文件，并针对软件开发（如 Flutter、Android、iOS 或后端服务）的高性能查询需求，将 215MB 的 CSV 词典数据转换并写成了优化且带索引的 **SQLite 软件词库**。
-
 > [!IMPORTANT]
 > **说明**：Daily Hanzi 完整软件源码暂未开放。当前仓库上传与展示的是经过多智能体系统（Multi-Agent System）清洗并补全的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库），以及供测试体验的 Demo 应用安装包。
 
