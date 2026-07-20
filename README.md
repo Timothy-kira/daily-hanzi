@@ -2,6 +2,10 @@
 
 本项目基于开源汉英词典数据集 [hanyingcidian](https://github.com/1418731519shuer/hanyingcidian) 整理，去除了原仓库的自述文件，并针对软件开发（如 Flutter、Android、iOS 或后端服务）的高性能查询需求，将 215MB 的 CSV 词典数据转换并写成了优化且带索引的 **SQLite 软件词库**。
 
+> [!IMPORTANT]
+> **说明**：Daily Hanzi 完整软件暂未开源。当前仓库上传与展示的是由 **Gemma 4** 清洗的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库）。
+
+
 ## 目录结构
 - `clean_dict.csv.zip` : 原始 CSV 数据集的 ZIP 压缩包 (约 57MB)。解压后可获得 215MB 的 `clean_dict.csv`。
 - `daily_hanzi.db.zip` : 已建立索引的 SQLite 数据库的 ZIP 压缩包 (约 72MB)。解压后可获得 245MB 的 `daily_hanzi.db` 软件词库。
