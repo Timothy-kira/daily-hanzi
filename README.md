@@ -3,7 +3,14 @@
 本项目基于开源汉英词典数据集 [hanyingcidian](https://github.com/1418731519shuer/hanyingcidian) 整理，去除了原仓库的自述文件，并针对软件开发（如 Flutter、Android、iOS 或后端服务）的高性能查询需求，将 215MB 的 CSV 词典数据转换并写成了优化且带索引的 **SQLite 软件词库**。
 
 > [!IMPORTANT]
-> **说明**：Daily Hanzi 完整软件暂未开源。当前仓库上传与展示的是由 **Gemma 4** 清洗的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库）。
+> **说明**：Daily Hanzi 完整软件暂未开源。当前仓库上传与展示的是经过多智能体系统（Multi-Agent System）清洗并补全的大型汉英词典数据库（包含 CSV 原始数据与 SQLite 软件词库）。
+
+## 🤖 数据处理工作流 (Multi-Agent System)
+
+本词典数据库的整理与质量优化搭建并应用了一套高效的 **Multi-Agent 协作系统**：
+1. **清洗 Agent (Gemma 4)**：负责对原始词条、释义、例句与词性进行语法规范化和结构化清洗。
+2. **质量评估 Agent (Gemma 4)**：对清洗后的词条完整度、准确性与例句质量进行自动化打分。
+3. **联网检索与补全 Agent (Gemini)**：针对评分较低或内容欠缺的词条，自动分发给 Gemini 智能体，借助实时联网搜索（Web Search Grounding）补充权威词源、用法辨析与双语例句。
 
 
 ## 目录结构
